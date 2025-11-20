@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chill Spot Café</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --coffee-dark: #2B1B12;
+      --coffee-mid: #3A261A;
+      --caramel: #C58A5D;
+      --cream: #F5EDE3;
+      --beige: #E8DCC7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: var(--coffee-dark);
+      color: var(--cream);
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 50px;
+      background: var(--coffee-mid);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--caramel);
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--cream);
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--caramel);
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 85px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--caramel);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--beige);
+      margin-top: 10px;
+    }
+
+    /* CATEGORY CARDS */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px 70px;
+    }
+
+    .image-card {
+      width: 240px;
+      height: 200px;
+      background: var(--coffee-mid);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+      transition: 0.3s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      filter: brightness(85%);
+    }
+
+    .image-card span {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--caramel);
+      background: var(--coffee-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: var(--beige);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo">The Chill Spot</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>• Premium Coffee • Cozy Vibes</h1>
+  <p>Your warm corner for delicious food & rich coffee blends.</p>
+</section>
+
+<section class="image-gallery">
+
+  <a href="pizza.html">
+    <div class="image-card">
+      <img src="images/pizza.jpg">
+      <span>Pizza</span>
+    </div>
+  </a>
+
+  <a href="burger.html">
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800">
+      <span>Burgers</span>
+    </div>
+  </a>
+
+  <a href="icecream.html">
+    <div class="image-card">
+      <img src="images/milkshake.jpg">
+      <span>Ice Cream</span>
+    </div>
+  </a>
+
+  <a href="coffee.html">
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800">
+      <span>Coffee</span>
+    </div>
+  </a>
+
+  <a href="mojito.html">
+    <div class="image-card">
+      <img src="images/mojito.jpg">
+      <span>Mojitos</span>
+    </div>
+  </a>
+
+</section>
+
+<footer>
+  © 2025 The Chill Spot Café — Crafted with Love
+</footer>
+
+</body>
+</html>
+
+
+
+
