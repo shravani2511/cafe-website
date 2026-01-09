@@ -1,199 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Chill Spot | Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chill Spot | Menu</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<header>
+  <h1>Scan & Order Menu</h1>
+  <p style="font-size:0.9rem;color:#6b4632;">
+    Scroll to explore all our offerings
+  </p>
+</header>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2d1f16, #5a3f31, #9e7a65);
-      background-size: cover;
-      color: #fff;
-      overflow-x: hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      color: #ffe7c7;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 1px;
-    }
 
-    header a {
-      color: #ffcc80;
-      text-decoration: none;
-      font-size: 1.1rem;
-      margin-top: 10px;
-      display: inline-block;
-    }
+:root{
+  --bg-main:#f3dec6;
+  --bg-section:#edd1b2;
+  --card-bg:#e7c29c;   /* 🔥 WARM BOX COLOR */
+  --accent:#8a5a3c;
+  --text-dark:#4a2f24;
+}
 
-    .menu-section-title {
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 30px;
-      color: #ffe7c7;
-      letter-spacing: 1px;
-      text-shadow: 0 0 10px rgba(255,255,255,0.2);
-    }
+body{
+  font-family:"Poppins",sans-serif;
+  background:linear-gradient(180deg,var(--bg-main),var(--bg-section));
+  color:var(--text-dark);
+}
 
-    /* GLASS CARD GRID */
-    .menu-container {
-      width: 90%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding-bottom: 50px;
-    }
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px 30px;
+}
 
-    /* GLASS CARD */
-    .menu-card {
-      padding: 25px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      border: 1px solid rgba(255,255,255,0.25);
-      transition: 0.4s ease;
-      transform: translateY(20px);
-      opacity: 0;
-      animation: fadeUp 0.8s forwards;
-    }
+header h1{
+  font-family:"Playfair Display",serif;
+  font-size:2.6rem;
+  color:var(--accent);
+}
 
-    /* ANIMATION */
-    @keyframes fadeUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+header a{
+  text-decoration:none;
+  color:#6b4632;
+  font-size:0.95rem;
+}
 
-    .menu-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      border-color: rgba(255,255,255,0.6);
-    }
+/* MENU SECTION */
+.menu-container{
+  max-width:900px;
+  margin:0 auto 80px;
+  padding:0 20px;
+}
 
-    .menu-title {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      color: #ffe7c7;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-shadow: 0px 0px 5px rgba(255,255,255,0.2);
-    }
+.menu-box{
+  background:var(--card-bg); /* ✅ NOT WHITE */
+  border-radius:22px;
+  padding:28px 32px;
+  margin-bottom:45px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+/* TITLE */
+.menu-box h2{
+  font-family:"Playfair Display",serif;
+  font-size:1.7rem;
+  color:var(--accent);
+  margin-bottom:18px;
+  border-bottom:2px solid #b8895d;
+  padding-bottom:6px;
+}
 
-    li {
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-      font-size: 1.05rem;
-    }
+/* ITEMS */
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  font-size:1rem;
+}
 
-    .price {
-      color: #ffcc80;
-      font-weight: 600;
-    }
+.menu-item:not(:last-child){
+  border-bottom:1px dashed #b8895d;
+}
 
-  </style>
+.price{
+  font-weight:600;
+}
 
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:.8rem;
+  color:#6b4632;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>✨ The Chill Spot Menu ✨</h1>
-  <a href="index.html">⬅ Back to Home</a>
+  <h1>Our Menu</h1>
+  <a href="index.html">← Home</a>
 </header>
 
-<h2 class="menu-section-title">Explore Our Specialties</h2>
-
-<!-- GLASSMORPHISM MENU GRID -->
 <section class="menu-container">
 
-  <!-- Pizza -->
-  <div class="menu-card">
-    <h2 class="menu-title">🍕 Pizza</h2>
-    <ul>
-      <li>Onion & Corn Pizza <span class="price">₹180</span></li>
-      <li>Roasted Mushroom Pizza <span class="price">₹240</span></li>
-      <li>Loaded Veg Pizza <span class="price">₹259</span></li>
-      <li>Cheese Blast Pizza <span class="price">₹369</span></li>
-    </ul>
-  </div>
+  <div class="menu-box" id="pizza">
+  <h2>🍕 Pizza</h2>
+  <div class="menu-item"><span>Onion & Corn</span><span class="price">₹180</span></div>
+  <div class="menu-item"><span>Roasted Mushroom</span><span class="price">₹240</span></div>
+  <div class="menu-item"><span>Paneer Tikka</span><span class="price">₹299</span></div>
+  <div class="menu-item"><span>Farmhouse Special</span><span class="price">₹329</span></div>
+  <div class="menu-item"><span>Cheese Burst</span><span class="price">₹369</span></div>
+  <div class="menu-item"><span>Mexican Green Wave</span><span class="price">₹349</span></div>
+  <div class="menu-item"><span>BBQ Paneer Pizza</span><span class="price">₹359</span></div>
+  <div class="menu-item"><span>Peri Peri Veg Pizza</span><span class="price">₹319</span></div>
+</div>
 
-  <!-- Burgers -->
-  <div class="menu-card">
-    <h2 class="menu-title">🍔 Burgers</h2>
-    <ul>
-      <li>Veg Burger <span class="price">₹49</span></li>
-      <li>Tandoori Paneer Burger <span class="price">₹179</span></li>
-      <li>Mighty Cheese Burger <span class="price">₹169</span></li>
-      <li>The Ghost Rider <span class="price">₹159</span></li>
-    </ul>
-  </div>
+ 
+<div class="menu-box" id="burger">
+  <h2>🍔 Burgers</h2>
+  <div class="menu-item"><span>Veg Burger</span><span class="price">₹49</span></div>
+  <div class="menu-item"><span>Crispy Veg Supreme</span><span class="price">₹149</span></div>
+  <div class="menu-item"><span>Tandoori Paneer Burger</span><span class="price">₹179</span></div>
+  <div class="menu-item"><span>Mighty Cheese Burger</span><span class="price">₹169</span></div>
+  <div class="menu-item"><span>Peri Peri Burger</span><span class="price">₹189</span></div>
+  <div class="menu-item"><span>Double Patty Veg Burger</span><span class="price">₹199</span></div>
+</div>
 
-  <!-- Ice Cream -->
-  <div class="menu-card">
-    <h2 class="menu-title">🍨 Ice Cream & Shakes</h2>
-    <ul>
-      <li>Dry Fruit Falooda <span class="price">₹199</span></li>
-      <li>Red Velvet Cookie Shake <span class="price">₹200</span></li>
-      <li>Wild Strawberry Shake <span class="price">₹180</span></li>
-      <li>Butterscotch Scoop <span class="price">₹50</span></li>
-      <li>Pista Scoop <span class="price">₹49</span></li>
-      <li>Vanilla Ice Cream <span class="price">₹39</span></li>
-      <li>Seven Wonders Sundae <span class="price">₹300</span></li>
-      <li>Blueberry Bliss Sundae <span class="price">₹169</span></li>
-      <li>Mocha Twist Sundae <span class="price">₹139</span></li>
-    </ul>
-  </div>
+<div class="menu-box" id="icecream">
+  <h2>🍨 Ice Cream & Shakes</h2>
+  <div class="menu-item"><span>Vanilla Scoop</span><span class="price">₹39</span></div>
+  <div class="menu-item"><span>Butterscotch Scoop</span><span class="price">₹50</span></div>
+  <div class="menu-item"><span>Chocolate Scoop</span><span class="price">₹59</span></div>
+  <div class="menu-item"><span>Oreo Thick Shake</span><span class="price">₹190</span></div>
+  <div class="menu-item"><span>Red Velvet Shake</span><span class="price">₹200</span></div>
+  <div class="menu-item"><span>Dry Fruit Falooda</span><span class="price">₹199</span></div>
+  <div class="menu-item"><span>Brownie with Ice Cream</span><span class="price">₹219</span></div>
+</div>
 
-  <!-- Coffee -->
-  <div class="menu-card">
-    <h2 class="menu-title">☕ Coffee</h2>
-    <ul>
-      <li>Hot Cappuccino <span class="price">₹60</span></li>
-      <li>Hot Black Coffee <span class="price">₹40</span></li>
-      <li>Hot Coffee Latte <span class="price">₹60</span></li>
-      <li>Coco Cold Coffee <span class="price">₹120</span></li>
-      <li>Ice Latte Coffee <span class="price">₹70</span></li>
-      <li>Cold Coffee w/ Ice Cream <span class="price">₹140</span></li>
-    </ul>
-  </div>
+<div class="menu-box" id="coffee">
+  <h2>☕ Coffee</h2>
+  <div class="menu-item"><span>Hot Cappuccino</span><span class="price">₹60</span></div>
+  <div class="menu-item"><span>Hot Latte</span><span class="price">₹60</span></div>
+  <div class="menu-item"><span>Hot Black Coffee</span><span class="price">₹40</span></div>
+  <div class="menu-item"><span>Cold Coffee</span><span class="price">₹120</span></div>
+  <div class="menu-item"><span>Caramel Cold Coffee</span><span class="price">₹150</span></div>
+  <div class="menu-item"><span>Mocha Cold Coffee</span><span class="price">₹160</span></div>
+  <div class="menu-item"><span>Hazelnut Latte</span><span class="price">₹170</span></div>
+</div>
 
-  <!-- Mojitos -->
-  <div class="menu-card">
-    <h2 class="menu-title">🍹 Mojitos</h2>
-    <ul>
-      <li>Kiwi Crush <span class="price">₹70</span></li>
-      <li>Strawberry <span class="price">₹80</span></li>
-      <li>Mango <span class="price">₹70</span></li>
-      <li>Watermelon <span class="price">₹60</span></li>
-      <li>Mint <span class="price">₹59</span></li>
-    </ul>
-  </div>
+<div class="menu-box" id="mojito">
+  <h2>🍹 Mojitos</h2>
+  <div class="menu-item"><span>Classic Mint</span><span class="price">₹59</span></div>
+  <div class="menu-item"><span>Lemon Mint</span><span class="price">₹65</span></div>
+  <div class="menu-item"><span>Kiwi Mojito</span><span class="price">₹70</span></div>
+  <div class="menu-item"><span>Strawberry Mojito</span><span class="price">₹80</span></div>
+  <div class="menu-item"><span>Blue Lagoon</span><span class="price">₹85</span></div>
+  <div class="menu-item"><span>Green Apple Mojito</span><span class="price">₹75</span></div>
+</div>
+
 
 </section>
 
+<footer>
+  © 2025 The Chill Spot Café
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+if(category){
+  document.querySelectorAll(".menu-box").forEach(box=>{
+    box.style.display = box.id === category ? "block" : "none";
+  });
+}
+</script>
+
 </body>
 </html>
+
+
+
 

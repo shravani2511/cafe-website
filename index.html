@@ -1,199 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Chill Spot Café</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chill Spot Café</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    :root {
-      --coffee-dark: #2B1B12;
-      --coffee-mid: #3A261A;
-      --caramel: #C58A5D;
-      --cream: #F5EDE3;
-      --beige: #E8DCC7;
-    }
+:root{
+  --top-color:#f3dec6;
+  --bottom-color:#e2bc93;
+  --accent:#8a5a3c;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+body{
+  font-family:"Poppins",sans-serif;
+  color:#4a2f24;
+}
 
-    body {
-      background: var(--coffee-dark);
-      color: var(--cream);
-    }
+/* HEADER */
+header{
+  background:var(--top-color);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+}
 
-    /* NAVBAR */
-    header {
-      padding: 20px 50px;
-      background: var(--coffee-mid);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.logo{
+  font-family:"Playfair Display",serif;
+  font-size:1.9rem;
+  color:var(--accent);
+}
 
-    .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--caramel);
-    }
+nav a{
+  margin-left:24px;
+  text-decoration:none;
+  color:#6b4632;
+  font-weight:500;
+}
 
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: var(--cream);
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
+/* HERO */
+.hero{
+  background:var(--top-color);
+  height:42vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 
-    nav a:hover {
-      color: var(--caramel);
-    }
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:2.8rem;
+  color:var(--accent);
+  margin-bottom:10px;
+}
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 85px 20px 40px;
-    }
+.hero p{
+  font-size:1rem;
+  max-width:520px;
+  margin:auto;
+  line-height:1.6;
+  color:#6b4632;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      color: var(--caramel);
-    }
+.divider{
+  width:70px;
+  height:2px;
+  background:#caa27c;
+  margin:18px auto 0;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--beige);
-      margin-top: 10px;
-    }
+/* CATEGORY SECTION */
+.category-section{
+  background:var(--bottom-color);
+  padding:40px 30px 55px;
+}
 
-    /* CATEGORY CARDS */
-    .image-gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 40px 20px 70px;
-    }
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;
+  max-width:1150px;
+  margin:auto;
+}
 
-    .image-card {
-      width: 240px;
-      height: 200px;
-      background: var(--coffee-mid);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
-      transition: 0.3s ease;
-      cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+.category-card{
+  background:#fbf3e8;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 14px 26px rgba(0,0,0,0.18);
+  transition:transform .3s ease;
+  text-decoration:none;
+}
 
-    .image-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-    }
+.category-card:hover{
+  transform:translateY(-5px);
+}
 
-    .image-card img {
-      width: 100%;
-      height: 70%;
-      object-fit: cover;
-      filter: brightness(85%);
-    }
+.category-card img{
+  width:100%;
+  height:155px;
+  object-fit:cover;
+}
 
-    .image-card span {
-      display: block;
-      text-align: center;
-      padding: 12px;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--caramel);
-      background: var(--coffee-dark);
-    }
+.category-card span{
+  display:block;
+  text-align:center;
+  padding:12px;
+  font-weight:600;
+  background:#f1ddc5;
+  color:#6b4632;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: var(--beige);
-    }
-
-  </style>
-
+/* FOOTER */
+footer{
+  background:var(--bottom-color);
+  text-align:center;
+  padding:18px;
+  font-size:.8rem;
+  color:#6b4632;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1 class="logo">The Chill Spot</h1>
-
+  <div class="logo">The Chill Spot</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
-    <a href="#">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>• Premium Coffee • Cozy Vibes</h1>
-  <p>Your warm corner for delicious food & rich coffee blends.</p>
+  <div>
+    <h1>• Premium Coffee • Cozy Vibes</h1>
+    <p>Your warm corner for slow coffee, comforting food, and conversations that linger.</p>
+    <div class="divider"></div>
+  </div>
 </section>
 
-<section class="image-gallery">
+<section class="category-section">
+  <div class="category-grid">
 
-  <a href="pizza.html">
-    <div class="image-card">
-      <img src="images/pizza.jpg">
+    <a href="menu.html?category=pizza" class="category-card">
+      <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=800">
       <span>Pizza</span>
-    </div>
-  </a>
+    </a>
 
-  <a href="burger.html">
-    <div class="image-card">
+    <a href="menu.html?category=burger" class="category-card">
       <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800">
       <span>Burgers</span>
-    </div>
-  </a>
+    </a>
 
-  <a href="icecream.html">
-    <div class="image-card">
-      <img src="images/milkshake.jpg">
+    <a href="menu.html?category=icecream" class="category-card">
+      <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800">
       <span>Ice Cream</span>
-    </div>
-  </a>
+    </a>
 
-  <a href="coffee.html">
-    <div class="image-card">
+    <a href="menu.html?category=coffee" class="category-card">
       <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800">
       <span>Coffee</span>
-    </div>
-  </a>
+    </a>
 
-  <a href="mojito.html">
-    <div class="image-card">
-      <img src="images/mojito.jpg">
+    <a href="menu.html?category=mojito" class="category-card">
+      <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800">
       <span>Mojitos</span>
-    </div>
-  </a>
+    </a>
 
+  </div>
 </section>
 
 <footer>
-  © 2025 The Chill Spot Café — Crafted with Love
+  © 2025 The Chill Spot Café
 </footer>
 
 </body>
 </html>
-
-
-
-

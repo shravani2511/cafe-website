@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Chill Spot Café</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --page-bg:#f3dec6;
+  --section-bg:#e6c4a0;
+  --card-bg:#d9b38c; /* 🔥 WARM CONTACT BOX */
+  --accent:#8a5a3c;
+  --text:#4a2f24;
+}
+
+body{
+  font-family:"Poppins",sans-serif;
+  background:linear-gradient(180deg,var(--page-bg),var(--section-bg));
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* NAVBAR */
+header{
+  background:var(--page-bg);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+}
+
+.logo{
+  font-family:"Playfair Display",serif;
+  font-size:1.9rem;
+  color:var(--accent);
+}
+
+nav a{
+  margin-left:24px;
+  text-decoration:none;
+  color:#6b4632;
+  font-weight:500;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:70px 20px;
+}
+
+.contact-card{
+  background:var(--card-bg); /* ✅ NOT WHITE */
+  padding:42px 45px;
+  border-radius:22px;
+  max-width:520px;
+  width:100%;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  text-align:center;
+}
+
+/* TEXT */
+.contact-card h1{
+  font-family:"Playfair Display",serif;
+  font-size:2.3rem;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+
+.contact-card p{
+  margin-bottom:26px;
+  font-size:0.95rem;
+  color:#5a3a2b;
+}
+
+/* INFO */
+.contact-info{
+  text-align:left;
+  font-size:1rem;
+}
+
+.contact-info div{
+  margin-bottom:14px;
+  line-height:1.5;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px;
+  font-size:0.8rem;
+  color:#6b4632;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">The Chill Spot</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <div class="contact-card">
+    <h1>Contact Us</h1>
+    <p>Come visit us or get in touch anytime — we’re always happy to serve.</p>
+
+    <div class="contact-info">
+      <div>📍 <strong>Address:</strong><br>
+        214, Lakeview Road,<br>
+        Indiranagar, Bengaluru – 560038
+      </div>
+
+      <div>📞 <strong>Phone:</strong> +91 98765 43210</div>
+      <div>✉️ <strong>Email:</strong> hello@thechillspotcafe.com</div>
+
+      <div>⏰ <strong>Hours:</strong><br>
+        10:00 AM – 11:00 PM
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 The Chill Spot Café
+</footer>
+
+</body>
+</html>
